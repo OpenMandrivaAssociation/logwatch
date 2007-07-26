@@ -1,6 +1,6 @@
 Summary: 	Analyzes and Reports on system logs
 Name: 		logwatch
-Version: 	7.3.2
+Version: 	7.3.6
 Release: 	%mkrel 1
 License: 	MIT
 Group: 		Monitoring
@@ -20,14 +20,13 @@ of the package on many systems.
 
 
 %prep
-rm -rf %{buildroot}
 %setup
 %patch -p0
 
 %build
 
-
 %install
+rm -rf %{buildroot}
 install -m 0755 -d %{buildroot}%{_sysconfdir}/log.d/conf/logfiles
 install -m 0755 -d %{buildroot}%{_sysconfdir}/log.d/conf/services
 install -m 0755 -d %{buildroot}%{_sysconfdir}/log.d/scripts/services
@@ -102,5 +101,3 @@ rm -rf %{buildroot}
 %{_sysconfdir}/cron.daily/0%{name}
 %doc %{_mandir}/man8/%{name}.8*
 %doc License project/CHANGES project/TODO
-
-
