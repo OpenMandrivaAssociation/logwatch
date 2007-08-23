@@ -1,7 +1,7 @@
 Summary: 	Analyzes and Reports on system logs
 Name: 		logwatch
 Version: 	7.3.6
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 License: 	MIT
 Group: 		Monitoring
 URL: 		http://www.logwatch.org
