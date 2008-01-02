@@ -9,6 +9,7 @@ BuildArch: 	noarch
 Source: 	ftp://ftp.kaybee.org/pub/linux/%{name}-%{version}.tar.bz2
 Patch0:		logwatch-fixpath.patch
 Requires: 	perl,coreutils,grep,mailx
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 
 %description
