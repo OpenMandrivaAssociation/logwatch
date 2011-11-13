@@ -1,12 +1,12 @@
 Summary: 	Analyzes and Reports on system logs
 Name: 		logwatch
-Version: 	7.3.6
+Version: 	7.4.0
 Release: 	%mkrel 4
 License: 	MIT
 Group: 		Monitoring
 URL: 		http://www.logwatch.org
 BuildArch: 	noarch
-Source: 	ftp://ftp.kaybee.org/pub/linux/%{name}-%{version}.tar.bz2
+Source: 	http://downloads.sourceforge.net/project/logwatch/logwatch-7.4.0/logwatch-7.4.0.tar.gz
 Patch0:		logwatch-fixpath.patch
 Requires: 	perl,coreutils,grep,mailx
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -21,7 +21,7 @@ of the package on many systems.
 
 %prep
 %setup
-%patch -p0
+%patch0 -p0
 
 %build
 
@@ -64,14 +64,9 @@ install -m 0755 -d %{buildroot}%{_sysconfdir}/cron.daily
 ln -s ../log.d/scripts/logwatch.pl %{buildroot}%{_sysconfdir}/cron.daily/0%{name}
 install -m 0755 -d %{buildroot}%{_sbindir}
 ln -s ../..%{_sysconfdir}/log.d/scripts/logwatch.pl %{buildroot}%{_sbindir}/%{name}
-chmod 644 License
 
 %clean
 rm -rf %{buildroot}
-
-
-
-
 
 %files
 %defattr(-,root,root)
@@ -100,4 +95,3 @@ rm -rf %{buildroot}
 %{_sysconfdir}/log.d/%{name}.conf
 %{_sysconfdir}/cron.daily/0%{name}
 %doc %{_mandir}/man8/%{name}.8*
-%doc License project/CHANGES project/TODO
