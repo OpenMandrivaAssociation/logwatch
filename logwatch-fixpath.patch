@@ -1,0 +1,13 @@
+--- scripts/logwatch.pl.orig	2006-03-25 00:16:55.000000000 +0100
++++ scripts/logwatch.pl	2006-07-13 00:58:26.000000000 +0200
+@@ -41,8 +41,8 @@
+ use POSIX qw(locale_h);
+ setlocale(LC_ALL, "C");
+ 
+-my $BaseDir = "/usr/share/logwatch";
+-my $ConfigDir = "/etc/logwatch";
++my $BaseDir = "/etc/log.d";
++my $ConfigDir = "/etc/log.d";
+ my $PerlVersion = "$^X";
+ 
+ #############################################################################
