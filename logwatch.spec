@@ -95,3 +95,29 @@ rm -rf %{buildroot}
 %{_sysconfdir}/log.d/%{name}.conf
 %{_sysconfdir}/cron.daily/0%{name}
 %doc %{_mandir}/man8/%{name}.8*
+
+
+%changelog
+* Sun Nov 13 2011 Alexander Khrukin <akhrukin@mandriva.org> 7.4.0-4mdv2012.0
++ Revision: 730311
+- version update and spec files section fix
+
+* Mon Jul 28 2008 Thierry Vignaud <tv@mandriva.org> 7.3.6-4mdv2009.0
++ Revision: 251372
+- rebuild
+
+* Thu Jan 03 2008 Olivier Blin <blino@mandriva.org> 7.3.6-2mdv2008.1
++ Revision: 140932
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Thu Aug 23 2007 Thierry Vignaud <tv@mandriva.org> 7.3.6-2mdv2008.0
++ Revision: 70344
+- fileutils, sh-utils & textutils have been obsoleted by coreutils a long time ago
+
+* Thu Jul 26 2007 Tomasz Pawel Gajc <tpg@mandriva.org> 7.3.6-1mdv2008.0
++ Revision: 55960
+- new version
+
