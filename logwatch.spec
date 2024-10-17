@@ -4,7 +4,7 @@ Version: 	7.4.0
 Release: 	5
 License: 	MIT
 Group: 		Monitoring
-URL: 		http://www.logwatch.org
+URL: 		https://www.logwatch.org
 BuildArch: 	noarch
 Source: 	http://downloads.sourceforge.net/project/logwatch/logwatch-7.4.0/logwatch-7.4.0.tar.gz
 Patch0:		logwatch-fixpath.patch
